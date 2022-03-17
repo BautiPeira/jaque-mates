@@ -1,0 +1,24 @@
+{
+  "name": "web3",
+  "version": "1.0.0",
+  "description": "Mates!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BautiPeira/jaque-mates.git"
+  },
+  "author": "BautiPeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BautiPeira/jaque-mates/issues"
+  },
+  "homepage": "https://github.com/BautiPeira/jaque-mates#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}

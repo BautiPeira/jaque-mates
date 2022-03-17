@@ -6,89 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>¿Quiénes somos? | Jaque-Mate</title>
     <link rel="stylesheet" href="/style.css" />
-    <link rel="shortcut icon"  href="../assets/favicon.png" type="image/x-icon"/>
-    <script src="https://kit.fontawesome.com/d45eddfb45.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/d45eddfb45.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <!-- EMPIEZA EL NAVBAR -->
     <header>
-      <a href="#"><img class="logo" src="../assets/favicon.png" /></a>
-      <nav class="navbar">
-        <ul>
-          <li>
-            <a href="./pages/productos.html"><h1 class="proa">Productos</h1></a>
-          </li>
-
-          <li>
-            <a href="/index.html#comocomprar"
-              ><h1 class="proa">¿Cómo comprar?</h1></a
+      <a href="#"><img class="logo" src="./assets/favicon.png" /></a>
+      <div class="container-nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-          </li>
-
-          <li>
-            <a href="../index.html"><h1 class="proa">Inicio</h1></a>
-          </li>
-
-          <li>
-            <a href="#"
-              ><h1 class="proa" id="colorquienessomos">¿Quiénes somos?</h1></a
-            >
-          </li>
-
-          <li class="local">
-            <a href="./locales.html"><h1>Locales</h1></a>
-          </li>
-        </ul>
-      </nav>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle nv-0"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Productos
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="/pages/productos/mates.html"
+                        >Mates</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/pages/productos/materos.html"
+                        >Materos</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/pages/productos/termos.html"
+                        >Termos</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link nv-1"
+                    aria-current="page"
+                    href="/index.html#comocomprar"
+                    >¿Cómo comprar?</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nv-2" href="/index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nv-3" href="/pages/quienessomos.html"
+                    >¿Quiénes somos?</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nv-4" href="/pages/locales.html"
+                    >Locales</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
     <!-- TERMINA EL NAVBAR -->
 
     <!-- EMPIEZA EL CARRUSEL DE IMÁGENES -->
     <section class="carruselfotos">
       <div
-        id="carouselExampleDark"
-        class="carousel carousel-dark slide"
+        id="carouselExampleIndicators"
+        class="carousel slide"
         data-bs-ride="carousel"
       >
         <div class="carousel-indicators">
           <button
             type="button"
-            data-bs-target="#carouselExampleDark"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="0"
             class="active"
             aria-current="true"
-            aria-label="Presentación 1"
+            aria-label="Slide 1"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleDark"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="1"
-            aria-label="Presentación 2"
+            aria-label="Slide 2"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleDark"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="2"
-            aria-label="Presentación 3"
+            aria-label="Slide 3"
           ></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="/assets/carrusel1.png" class="d-block w-100" alt="Persona riendose con mate." />
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="/assets/carrusel2.png" class="d-block w-100" alt="Amigos tomando mate." />
+          <div class="carousel-item active">
+            <img
+              src="assets/carrusel1.png"
+              class="d-block w-100 h-50"
+              alt="..."
+            />
           </div>
           <div class="carousel-item">
-            <img src="/assets/carrusel3.png" class="d-block w-100" alt="Mate cebado." />
+            <img
+              src="assets/carrusel2.png"
+              class="d-block w-100 h-50"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/carrusel3.png"
+              class="d-block w-100 h-50"
+              alt="..."
+            />
           </div>
         </div>
         <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleDark"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -97,7 +163,7 @@
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleDark"
+          data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>

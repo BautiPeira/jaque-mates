@@ -16,11 +16,20 @@
 
 /* Imágenes */
 
-.logo {
+.logo, {
   width: 7%;
   height: 7%;
   padding-bottom: 1%;
   padding-top: 1%;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+#principal {
+  text-align: center;
+  width: 7%;
+  height: 7%;
 }
 
 .carrusel {
@@ -249,15 +258,16 @@ body {
   border-color: black;
 }
 .nl p,
-h2,
-a {
+.nl h2, .nl a {
   font-size: 26px;
   text-decoration: none;
   color: black;
   font-weight: bold;
+  text-align: center;
 }
-.nl h2 {
+.nl h2, .nl h1 {
   color: red;
+  text-align: center;
 }
 
 .futer {
@@ -403,7 +413,58 @@ a {
   min-height: 40vh;
 }
 
+/* Mates */
+.mt-titulo {
+  color:rgb(34, 34, 34);
+}
+.container-mates {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "mate-1 mate-2 mate-3 mate-4 mate-5"
+    "mate-6 mate-7 mate-8 mate-9 mate-10";
+}
 
+.mate-1 { 
+  grid-area: mate-1; 
+}
+
+.mate-2 { 
+  grid-area: mate-2; 
+}
+
+.mate-3 { 
+  grid-area: mate-3; 
+}
+
+.mate-4 { 
+  grid-area: mate-4; 
+}
+
+.mate-5 {
+  grid-area: mate-5; 
+  }
+
+.mate-6 { 
+  grid-area: mate-6;
+ }
+
+.mate-7 { 
+  grid-area: mate-7;
+ }
+
+.mate-8 { 
+  grid-area: mate-8;
+ }
+
+.mate-9 { 
+  grid-area: mate-9;
+ }
+
+.mate-10 { 
+  grid-area: mate-10;
+ }
 
 
 
@@ -563,20 +624,54 @@ a {
   "redes";
   ;
   grid-template-rows: 4fr 4fr 4fr 4fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   text-align: center;
   align-items: center;
   font-family: 'Maven Pro';
 }
 
-.des p a, .redes, .dir {
-  font-size: 150%;
+.futer p a {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.redes ul,
+.redes ul li a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+.redes ul li a:hover,
+.des p a:hover {
+  color: rgb(169, 169, 169);
 }
 
-.des, .redes, .dir {
-  padding-left: 10%;
+.des {
+  grid-area: des;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+.dir {
+  grid-area: dir;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+.redes {
+  grid-area: redes;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
 }
 .logo2 {
-  min-width: 10rem;
-  min-height: 10rem;
+  grid-area: logo2;
+}
+.futer a {
+  font-size: 130%;
+} 
+.logo2 img {
+  height: 13rem;
+  width: 13rem;
+}
 }
