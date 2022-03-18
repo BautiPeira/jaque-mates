@@ -180,7 +180,7 @@ body {
 /* Sección Newsletter */
 
 .newsletter {
-  background-image: url("./assets/nl.png");
+  background-image: url("/assets/nl.png");
   background-size:cover;
 }
 
@@ -461,7 +461,9 @@ body {
 .mate-10 { 
   grid-area: mate-10;
  }
-
+  .mate-1, .mate-2, .mate-3, .mate-4, .mate-5, .mate-6, .mate-7, .mate-8, .mate-9, .mate-10 {
+    padding-top: 7%;
+  }
 
 
 @media screen and (max-width: 768px) {
