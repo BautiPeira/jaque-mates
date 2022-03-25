@@ -168,7 +168,7 @@ body {
 /* Sección Newsletter */
 
 .newsletter {
-  background-image: url("/assets/nl.png");
+  background-image: url("../assets/nl-min.png");
   background-size:cover;
 }
 
