@@ -1,19 +1,21 @@
-@charset "UTF-8";
 /* Importar  */
+
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Quicksand:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 /* Estilo  */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 /* Imágenes */
+
 .logo {
   width: 7%;
   height: 7%;
@@ -30,6 +32,21 @@
   width: 100%;
   height: 300px;
 }
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-family: "Quicksand";
+  font-weight: bolder;
+  color: #9f8571;
+  font-size: 21px;
+}
 
 .nv-0:hover,
 .nv-1:hover,
@@ -38,9 +55,7 @@
 .nv-4:hover {
   color: red;
   transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
 }
-
 .nv-0,
 .nv-1,
 .nv-2,
@@ -62,11 +77,28 @@
   font-weight: lighter;
   font-size: 90%;
 }
-
 .navbar ul li a h1:hover {
   color: rgba(111, 62, 25, 0.597);
 }
 
+.nav-item a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #a5503c;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* ------------------------------ */
 header {
   text-align: center;
   font-family: "Maven Pro", "Quicksand";
@@ -81,7 +113,7 @@ body {
 
 .titulo {
   font-size: 20%;
-  color: #3f3f3f;
+  color: rgb(63, 63, 63);
   text-align: center;
   padding-top: 3%;
   padding-bottom: 4%;
@@ -89,17 +121,6 @@ body {
 
 .comocomprar {
   background-color: #eaeaea;
-}
-
-.tabla1 {
-  width: 90%;
-  margin: 0% auto;
-}
-
-.tabla1 table tr td p {
-  font-size: 140% !important;
-  color: rgba(255, 255, 255, 0.933);
-  font-family: "Nunito Sans";
 }
 
 /* Sección azul */
@@ -110,32 +131,22 @@ body {
   font-weight: bold;
   color: white;
   background-color: #1a9fff;
-  display:  grid;
   display: grid;
-  grid-column: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-row: 1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "pagos telefono envios";
 }
 
 .pagos {
-   grid-row: 1;
-   grid-column: 1;
   grid-area: pagos;
 }
 
 .telefono {
-   grid-row: 1;
-   grid-column: 2;
   grid-area: telefono;
 }
 
 .envios {
-   grid-row: 1;
-   grid-column: 3;
   grid-area: envios;
 }
 
@@ -149,11 +160,8 @@ body {
 
 /* Sección como comprar */
 .container-comocomprar {
-  display:  grid;
   display: grid;
-  grid-column: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-row: 1fr;
   grid-template-rows: 1fr;
   gap: 3%;
   grid-auto-flow: row;
@@ -163,26 +171,18 @@ body {
 }
 
 .cp-1 {
-   grid-row: 1;
-   grid-column: 1;
   grid-area: cp-1;
 }
 
 .cp-2 {
-   grid-row: 1;
-   grid-column: 2;
   grid-area: cp-2;
 }
 
 .cp-3 {
-   grid-row: 1;
-   grid-column: 3;
   grid-area: cp-3;
 }
 
 .cp-4 {
-   grid-row: 1;
-   grid-column: 4;
   grid-area: cp-4;
   padding-bottom: 10%;
 }
@@ -193,14 +193,12 @@ body {
   font-size: 23px;
   font-weight: bold;
 }
-
 .cp-title {
   font-family: "Maven Pro";
   text-align: center;
   padding-top: 3%;
   padding-bottom: 1%;
 }
-
 .cp-1,
 .cp-2,
 .cp-3,
@@ -209,16 +207,11 @@ body {
   font-size: 18px;
   color: #333333;
 }
-
 /* Sección Newsletter */
+
 .newsletter {
-<<<<<<< HEAD
-  background-image: url("/assets/nl.png");
+  background-image: url(../assets/nl-min.png);
   background-size: cover;
-=======
-  background-image: url("../assets/nl-min.png");
-  background-size:cover;
->>>>>>> d581907be664e848ba7f76ee79f5b3b741fb3d2d
 }
 
 .newsletter-titulo {
@@ -235,28 +228,19 @@ body {
   border-radius: 10px;
   margin: auto;
 }
-
 .container-nsl {
-  display:  grid;
   display: grid;
-  grid-row: 1fr;
   grid-template-rows: 1fr;
-  grid-column: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "nsl-1 nsl-2";
 }
 
 .nsl-1 {
-   grid-row: 1;
-   grid-column: 1;
   grid-area: nsl-1;
 }
 
 .nsl-2 {
-   grid-row: 1;
-   grid-column: 2;
   grid-area: nsl-2;
   padding-bottom: 30%;
 }
@@ -269,14 +253,12 @@ body {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.481);
 }
-
 .newsletter table tr th form label {
   color: #fff;
   font-family: "Nunito sans";
 }
-
 .newsletter table {
-  margin: 0% auto;
+  margin: auto;
   font-family: "Nunito sans";
 }
 
@@ -285,30 +267,22 @@ body {
   font-family: "Nunito sans";
   padding-bottom: 5%;
 }
-
 .newsletter-3 {
   padding-bottom: 10%;
-}
-
-.email br {
-  display: no;
 }
 
 #locales {
   color: red;
 }
-
 .nl {
   color: red;
   font-size: 28px;
   font-family: "Quicksand";
 }
-
 .mapa {
   border-width: 1rem;
   border-color: black;
 }
-
 .nl p,
 .nl h2,
 .nl a {
@@ -318,7 +292,6 @@ body {
   font-weight: bold;
   text-align: center;
 }
-
 .nl h2,
 .nl h1 {
   color: red;
@@ -326,136 +299,88 @@ body {
 }
 
 .futer {
-  background-color: #222222;
+  background-color: rgb(34, 34, 34);
   color: #b36f67;
   display: grid;
   grid-template-areas: "logo2 dir des redes";
-  grid-column: 4fr 4fr 4fr 4fr;
   grid-template-columns: 4fr 4fr 4fr 4fr;
-  justify-items: center;
-  box-align: center;
   align-items: center;
   font-family: "Maven Pro";
 }
 
 .futer p a {
   font-size: 1rem;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
-
 .redes ul,
 .redes ul li a {
   color: white;
   list-style: none;
   text-decoration: none;
 }
-
 .redes ul li a:hover,
 .des p a:hover {
-  color: darkgray;
+  color: rgb(169, 169, 169);
 }
 
 .des {
-   grid-row: 1;
-   grid-column: 3;
   grid-area: des;
   text-align: left;
   text-decoration: none;
 }
-
 .dir {
-   grid-row: 1;
-   grid-column: 2;
   grid-area: dir;
   text-align: left;
   font-weight: bold;
   text-decoration: none;
 }
-
 .redes {
-   grid-row: 1;
-   grid-column: 4;
   grid-area: redes;
   text-decoration: none;
   list-style: none;
   text-align: left;
 }
-
 .logo2 {
-   grid-row: 1;
-   grid-column: 1;
   grid-area: logo2;
 }
-
 .futer a {
   font-size: 130%;
 }
-
 .eparr {
   color: white;
 }
-
 .logo2 img {
   height: 11rem;
   width: 11rem;
 }
-
 .colorini {
   color: red !important;
 }
 
-/* Carrousel */
-#titulo {
-  width: 10%;
-  position: absolute;
-  padding: 0px;
-  margin: 0px auto;
-  text-align: center;
-  font-size: 27px;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  z-index: 99;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33),
-    -1px 0px 2px rgba(255, 255, 255, 0);
-}
-
-/* TERMINA CARRUSEL */
 .qs-0 {
   color: #5e5e5e;
   padding-top: 4%;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  display:  grid;
   display: grid;
-  grid-columns: .repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  grid-rows: 5rem 1fr 1fr;
   grid-template-rows: 5rem 1fr 1fr;
-  box-pack: end;
-  justify-content: end;
-  box-align: stretch;
+  justify-content: flex-end;
   align-items: stretch;
-  box-align: center;
   align-items: center;
   grid-template-areas:
     "qs-10"
     "qs-1";
 }
-
 .qs-1 {
-   grid-row: 2;
-   grid-column: 1;
   grid-area: qs-1;
   text-align: start;
   padding-left: 20%;
 }
 
 .qs-2 {
-  box-pack: start;
-     : start;
-  justify-content: start;
-   flex-line-pack: center;
+  justify-content: flex-start;
   align-content: center;
   text-align: justify;
 }
@@ -464,7 +389,6 @@ body {
   text-align: start;
   padding-left: 20%;
 }
-
 .qs-title {
   color: black;
   font-family: "Quicksand";
@@ -472,11 +396,9 @@ body {
   text-align: start;
   padding-left: 20%;
 }
-
 .qs-title-2 {
   padding-top: 17.5%;
 }
-
 .lineasp {
   border-left: thick solid #b36f67;
   height: 6%;
@@ -488,7 +410,6 @@ body {
 #colorquienessomos {
   color: red;
 }
-
 .qs-title-3 {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -498,22 +419,17 @@ body {
 .container-productos {
   margin-top: 100px;
 }
-
 .carousel-inner {
   min-height: 40vh;
 }
 
 /* Mates */
 .mt-titulo {
-  color: #222222;
+  color: rgb(34, 34, 34);
 }
-
 .container-mates {
-  display:  grid;
   display: grid;
-  grid-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-auto-flow: row;
   grid-template-areas:
@@ -522,65 +438,44 @@ body {
 }
 
 .mate-1 {
-   grid-row: 1;
-   grid-column: 1;
   grid-area: mate-1;
 }
 
 .mate-2 {
-   grid-row: 1;
-   grid-column: 2;
   grid-area: mate-2;
 }
 
 .mate-3 {
-   grid-row: 1;
-   grid-column: 3;
   grid-area: mate-3;
 }
 
 .mate-4 {
-   grid-row: 1;
-   grid-column: 4;
   grid-area: mate-4;
 }
 
 .mate-5 {
-   grid-row: 1;
-   grid-column: 5;
   grid-area: mate-5;
 }
 
 .mate-6 {
-   grid-row: 2;
-   grid-column: 1;
   grid-area: mate-6;
 }
 
 .mate-7 {
-   grid-row: 2;
-   grid-column: 2;
   grid-area: mate-7;
 }
 
 .mate-8 {
-   grid-row: 2;
-   grid-column: 3;
   grid-area: mate-8;
 }
 
 .mate-9 {
-   grid-row: 2;
-   grid-column: 4;
   grid-area: mate-9;
 }
 
 .mate-10 {
-    grid-row: 2;
-    grid-column: 5;
   grid-area: mate-10;
 }
-
 .mate-1,
 .mate-2,
 .mate-3,
@@ -600,40 +495,40 @@ body {
     width: 50%;
     height: 50%;
   }
+
   .navbar {
-    display:   grid;
     display: grid;
-      grid-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-rows: 1fr;
     grid-template-rows: 1fr;
-    box-pack: center;
-        : center;
     justify-content: center;
-    box-align: center;
-     flex-align: center;
     align-items: center;
   }
+
   .navbar ul {
     background-color: wheat;
   }
+
   .navbar ul li a {
     text-decoration: none;
     font-size: 140%;
   }
+
   .navbar ul li a h1 {
-    color: #763300;
+    color: rgb(118, 51, 0);
     font-weight: lighter;
     font-size: 90%;
   }
   .navbar ul li a h1:hover {
     color: rgba(111, 62, 25, 0.597);
   }
+
   header {
     text-align: center;
     font-family: "Maven Pro", "Quicksand";
   }
+
   /* Página azul */
+
   .container-etp {
     text-align: center;
     font-size: 20px;
@@ -643,32 +538,27 @@ body {
     background-color: #1a9fff;
     display: grid;
     justify-content: center;
-     grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-     grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 0px 0px;
     grid-auto-flow: column;
     grid-template-areas:
       "pagos"
       "telefono"
       "envios";
   }
+
   .pagos {
-     grid-row: 1;
-     grid-column: 1;
     grid-area: pagos;
   }
+
   .telefono {
-     grid-row: 2;
-     grid-column: 1;
     grid-area: telefono;
   }
+
   .envios {
-     grid-row: 3;
-     grid-column: 1;
     grid-area: envios;
   }
+
   .pagos img,
   .telefono img,
   .envios img {
@@ -676,13 +566,12 @@ body {
     padding-top: 10%;
     padding-bottom: 10%;
   }
+
   /* Sección como comprar */
+
   .container-comocomprar {
-    display:  grid;
     display: grid;
-     grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-     grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 3%;
     grid-auto-flow: row;
@@ -692,27 +581,24 @@ body {
     font-family: "Quicksand";
     font-weight: bold;
   }
+
   .cp-1 {
-     grid-row: 1;
-     grid-column: 1;
     grid-area: cp-1;
   }
+
   .cp-2 {
-     grid-row: 1;
-     grid-column: 2;
     grid-area: cp-2;
   }
+
   .cp-3 {
-     grid-row: 2;
-     grid-column: 1;
     grid-area: cp-3;
   }
+
   .cp-4 {
-     grid-row: 2;
-     grid-column: 2;
     grid-area: cp-4;
     padding-bottom: 10%;
   }
+
   .cp-h3 {
     color: #1a9fff;
     text-align: center;
@@ -735,11 +621,14 @@ body {
     font-size: 92%;
     color: #333333;
   }
+
   /* Sección Newsletter */
+
   .newsletter {
     background-image: url("../assets/nl.png");
     background-size: cover;
   }
+
   .newsletter-titulo {
     font-size: 26px;
     font-family: "Quicksand";
@@ -747,47 +636,40 @@ body {
     padding-bottom: 3%;
     padding-top: 3%;
   }
+
   .newsletter h1 {
     color: rgba(255, 255, 255, 0.933);
     font-family: "Nunito sans";
     padding-bottom: 5%;
   }
   .container-nsl {
-    display:  grid;
     display: grid;
-     grid-columns: 1fr;
     grid-template-columns: 1fr;
-     grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
       "nsl-1"
       "nsl-2";
   }
   .futer {
-    background-color: #222222;
+    background-color: rgb(34, 34, 34);
     color: #b36f67;
-    display:  grid;
     display: grid;
     grid-template-areas:
       "logo2"
       "dir"
       "des"
       "redes";
-     grid-rows: 4fr 4fr 4fr 4fr;
     grid-template-rows: 4fr 4fr 4fr 4fr;
-     grid-columns: 1fr;
     grid-template-columns: 1fr;
     text-align: center;
-    box-align: center;
-     flex-align: center;
     align-items: center;
     font-family: "Maven Pro";
   }
+
   .futer p a {
     font-size: 1rem;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
   .redes ul,
@@ -798,35 +680,28 @@ body {
   }
   .redes ul li a:hover,
   .des p a:hover {
-    color: darkgray;
+    color: rgb(169, 169, 169);
   }
+
   .des {
-     grid-row: 3;
-     grid-column: 1;
     grid-area: des;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
   }
   .dir {
-     grid-row: 2;
-     grid-column: 1;
     grid-area: dir;
     text-align: center;
     font-weight: bold;
     text-decoration: none;
   }
   .redes {
-     grid-row: 4;
-     grid-column: 1;
     grid-area: redes;
     text-decoration: none;
     list-style: none;
     text-align: center;
   }
   .logo2 {
-     grid-row: 1;
-     grid-column: 1;
     grid-area: logo2;
   }
   .futer a {
@@ -837,5 +712,3 @@ body {
     width: 13rem;
   }
 }
-<<<<<<< HEAD
-/*# sourceMappingURL=style.css.map */
