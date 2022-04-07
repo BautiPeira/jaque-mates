@@ -32,14 +32,9 @@
 }
 
 .navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   text-align: center;
   margin: 0 auto;
-  padding: 0;
+  padding-right: 2.8%;
   list-style: none;
 }
 
@@ -97,6 +92,10 @@
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
+}
+
+.espacio {
+  display: none;
 }
 
 header {
@@ -640,6 +639,16 @@ body {
     text-align: center;
     font-family: "Maven Pro", "Quicksand";
   }
+  .container-nsl {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 0px 5px;
+        grid-template-areas: "nwl-1" "nwl-2";
+  }
   /* Página azul */
   .container-etp {
     text-align: center;
@@ -753,55 +762,6 @@ body {
     padding-bottom: 5%;
     text-align: center;
   }
-  .container-nsl {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    gap: 0px 5px;
-    grid-auto-flow: row;
-        grid-template-areas: "nwl-1 nwl-2";
-  }
-  .nwl-1 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-        grid-template-areas: ". . ." ". email ." ". . .";
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: nwl-1;
-  }
-  .email {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: email;
-  }
-  .nwl-2 {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-        grid-template-areas: ". . ." ". suscribe ." ". . .";
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: nwl-2;
-  }
-  .suscribe {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: suscribe;
-  }
   .futer {
     background-color: #222222;
     color: #b36f67;
@@ -897,6 +857,60 @@ body {
     -ms-transform: translateX(calc(-300px * 7));
     -o-transform: translateX(calc(-300px * 7));
   }
+}
+
+.container-nsl {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 5px;
+  grid-auto-flow: row;
+      grid-template-areas: "nwl-1 nwl-2";
+}
+
+.nwl-1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: ". . ." ". email ." ". . .";
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nwl-1;
+}
+
+.email {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: email;
+}
+
+.nwl-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+      grid-template-areas: ". . ." ". suscribe ." ". . .";
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nwl-2;
+}
+
+.suscribe {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: suscribe;
 }
 
 .slider {
