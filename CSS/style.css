@@ -227,7 +227,7 @@ body {
 
 /* Sección Newsletter */
 .newsletter {
-  background-image: url("/assets/nl.png");
+  background-image: url("../assets/nl.png");
   background-size: cover;
 }
 
@@ -247,24 +247,29 @@ body {
 }
 
 .container-nsl {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-area: "nsl-1 nsl-2";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.nsl-1 {
-  grid-area: nsl-1;
-}
-
-.nsl-2 {
-  grid-area: nsl-2;
-  padding-bottom: 30%;
+.nwl-1, .nwl-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 5%;
 }
 
 .suscribe-input {
@@ -284,6 +289,25 @@ body {
 .newsletter table {
   margin: 0% auto;
   font-family: "Nunito sans";
+}
+
+.padding-5 {
+  padding-bottom: 3%;
+}
+
+.bt-contacto {
+  padding-top: 1.3%;
+  padding-bottom: 1.3%;
+}
+
+.btn-contacto {
+  background-color: #8A4B38;
+  color: white;
+}
+
+.btn-contacto:hover {
+  background-color: whitesmoke;
+  color: #8A4B38;
 }
 
 .newsletter h1 {
@@ -600,54 +624,34 @@ body {
   padding-top: 7%;
 }
 
+.mate-9 {
+  padding-bottom: 7%;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1A9FFF;
+}
+
 @media screen and (max-width: 768px) {
   /* Nav-bar */
   .logo {
-    width: 50%;
-    height: 50%;
-  }
-  .navbar {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .navbar ul {
-    background-color: wheat;
-  }
-  .navbar ul li a {
-    text-decoration: none;
-    font-size: 140%;
-  }
-  .navbar ul li a h1 {
-    color: #763300;
-    font-weight: lighter;
-    font-size: 90%;
-  }
-  .navbar ul li a h1:hover {
-    color: rgba(111, 62, 25, 0.597);
+    width: 35%;
+    height: 35%;
   }
   header {
     text-align: center;
     font-family: "Maven Pro", "Quicksand";
   }
   .container-nsl {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    gap: 0px 5px;
-        grid-template-areas: "nwl-1" "nwl-2";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   /* Página azul */
   .container-etp {
@@ -857,60 +861,6 @@ body {
     -ms-transform: translateX(calc(-300px * 7));
     -o-transform: translateX(calc(-300px * 7));
   }
-}
-
-.container-nsl {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  gap: 0px 5px;
-  grid-auto-flow: row;
-      grid-template-areas: "nwl-1 nwl-2";
-}
-
-.nwl-1 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-      grid-template-areas: ". . ." ". email ." ". . .";
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: nwl-1;
-}
-
-.email {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: email;
-}
-
-.nwl-2 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-      grid-template-areas: ". . ." ". suscribe ." ". . .";
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: nwl-2;
-}
-
-.suscribe {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: suscribe;
 }
 
 .slider {
